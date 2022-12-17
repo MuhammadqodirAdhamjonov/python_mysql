@@ -13,6 +13,10 @@ def print_all():
 
 def add_new_emp():
     id = int(input("Hodim uchun maxsus raqam kiriting: "))
+    if db.fetch(id) is not None:
+        print("\nBunday raqamdagi hodim allaqachon mavjud!!!")
+        add_new_emp()
+
     full_name = input("Hodimning ism familiyasini kiriting: ")
     phone_number = input("Hodim telefon raqamini kiriting: ")
 
