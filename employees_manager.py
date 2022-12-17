@@ -16,15 +16,15 @@ def add_new_emp():
     if db.fetch(id) is not None:
         print("\nBunday raqamdagi hodim allaqachon mavjud!!!")
         add_new_emp()
+    else:
+        full_name = input("Hodimning ism familiyasini kiriting: ")
+        phone_number = input("Hodim telefon raqamini kiriting: ")
 
-    full_name = input("Hodimning ism familiyasini kiriting: ")
-    phone_number = input("Hodim telefon raqamini kiriting: ")
-
-    db.create(id, full_name, phone_number)
-    print("\nHodim ro'yhatga qo'shildi")
-    print(f"Hodim kodi:     {id}")
-    print(f"F.I.O:          {full_name}")
-    print(f"Telefon raqami: {phone_number}")
+        db.create(id, full_name, phone_number)
+        print("\nHodim ro'yhatga qo'shildi")
+        print(f"Hodim kodi:     {id}")
+        print(f"F.I.O:          {full_name}")
+        print(f"Telefon raqami: {phone_number}")
 
 
 def update_emp_info():
